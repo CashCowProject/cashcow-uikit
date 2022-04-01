@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { PancakeRoundIcon, CogIcon, SvgProps } from "../../components/Svg";
+import { PancakeRoundIcon, CogIcon, SvgProps, CowRoundIcon } from "../../components/Svg";
 import Text from "../../components/Text/Text";
 import Flex from "../../components/Flex/Flex";
 import Dropdown from "../../components/Dropdown/Dropdown";
@@ -13,7 +13,7 @@ import * as IconModule from "./icons";
 import { socials, MENU_ENTRY_HEIGHT } from "./config";
 import { PanelProps, PushedProps } from "./types";
 
-interface Props extends PanelProps, PushedProps {}
+interface Props extends PanelProps, PushedProps { }
 
 const Icons = (IconModule as unknown) as { [key: string]: React.FC<SvgProps> };
 const { MoonIcon, SunIcon, LanguageIcon } = Icons;
@@ -60,6 +60,7 @@ const PanelFooter: React.FC<Props> = ({
   toggleTheme,
   isDark,
   cakePriceUsd,
+  cowPriceUsd,
   currentLang,
   langs,
   setLang,
@@ -77,15 +78,25 @@ const PanelFooter: React.FC<Props> = ({
 
   return (
     <Container>
+      {cowPriceUsd ? (
+        <PriceLink href={priceLink} target="_blank">
+          <CowRoundIcon width="24px" mr="8px" />
+          <Text color="textSubtle" bold>{`$${cowPriceUsd.toFixed(6)}`}</Text>
+        </PriceLink>
+      ) : (
+        <Skeleton width={80} height={24} />
+      )}
+
+      {cakePriceUsd ? (
+        <PriceLink href={priceLink} target="_blank">
+          <PancakeRoundIcon width="24px" mr="8px" />
+          <Text color="textSubtle" bold>{`$${cakePriceUsd.toFixed(6)}`}</Text>
+        </PriceLink>
+      ) : (
+        <Skeleton width={80} height={24} />
+      )}
+
       <SocialEntry>
-        {cakePriceUsd ? (
-          <PriceLink href={priceLink} target="_blank">
-            <PancakeRoundIcon width="24px" mr="8px" />
-            <Text color="textSubtle" bold>{`$${cakePriceUsd.toFixed(3)}`}</Text>
-          </PriceLink>
-        ) : (
-          <Skeleton width={80} height={24} />
-        )}
         <Flex>
           {socials.map((social, index) => {
             const Icon = Icons[social.icon];
