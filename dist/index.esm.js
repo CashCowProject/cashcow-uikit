@@ -2219,23 +2219,21 @@ var socials = [
         icon: "TwitterIcon",
         href: "https://twitter.com/CashCowProtocol",
     },
-
     {
         label: "Telegram",
         icon: "TelegramIcon",
         items: [
-          {
-            label: "English",
-            href: "https://t.me/cashcowprotocol",
-          },
-          {
-            label: "Spanish",
-            href: "https://t.me/cashcowprotocol_es",
-          },
+            {
+                label: "English",
+                href: "https://t.me/cashcowprotocol",
+            },
+            {
+                label: "Spanish",
+                href: "https://t.me/cashcowprotocol_es",
+            },
         ],
-      },
-
-      {
+    },
+    {
         label: "Discord",
         icon: "DiscordIcon",
         href: "https://discord.gg/3kFU9vCjs7",

@@ -2228,6 +2228,11 @@ var links = [
 ];
 var socials = [
     {
+        label: "Twitter",
+        icon: "TwitterIcon",
+        href: "https://twitter.com/CashCowProtocol",
+    },
+    {
         label: "Telegram",
         icon: "TelegramIcon",
         items: [
@@ -2236,21 +2241,16 @@ var socials = [
                 href: "https://t.me/cashcowprotocol",
             },
             {
-                label: "English",
-                href: "https://t.me/cashcowprotocol",
+                label: "Spanish",
+                href: "https://t.me/cashcowprotocol_es",
             },
         ],
     },
     {
-        label: "Twitter",
-        icon: "TwitterIcon",
-        href: "https://twitter.com/CashCowProtocol",
-    },
-    {
-        label: "Telegram",
-        icon: "TelegramIcon",
-        href: "https://www.reddit.com/r/GooseFinanceofficial",
-    },
+        label: "Discord",
+        icon: "DiscordIcon",
+        href: "https://discord.gg/3kFU9vCjs7",
+      },
 ];
 var MENU_HEIGHT = 64;
 var MENU_ENTRY_HEIGHT = 48;
