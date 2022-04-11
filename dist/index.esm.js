@@ -10,10 +10,8 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation.
-
 Permission to use, copy, modify, and/or distribute this software for any
 purpose with or without fee is hereby granted.
-
 THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
 REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
 AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
@@ -2039,6 +2037,12 @@ var Icon$16 = function (props) {
             React.createElement("path", { id: "Shape", d: "m6.05 6.68c-.10156011.25804893-.09140308.54668422.02804477.7969559.11944785.25027169.33745932.43970373.60195523.5230441 3.14 1 3.04 1 3.32 1 .4927375.00386501.9148502-.35178371.9946449-.83803264.0797947-.48624892-.2065147-.95815151-.6746449-1.11196736l-3-1c-.25193645-.08555066-.52757913-.06717426-.76592958.05106258-.23835046.11823684-.41975528.32658479-.50407042.57893742z" }))));
 };
 
+var Icon$Discord = function (props) {
+    return (React.createElement(Svg, __assign({ viewBox: "0 0 220 240" }, props),
+    React.createElement("path", { d: "M104.4 103.9c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1.1-6.1-4.5-11.1-10.2-11.1zm36.5 0c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1s-4.5-11.1-10.2-11.1z" }),
+    React.createElement("path", { d: "M189.5 20h-134C44.2 20 35 29.2 35 40.6v135.2c0 11.4 9.2 20.6 20.5 20.6h113.4l-5.3-18.5 12.8 11.9 12.1 11.2 21.5 19V40.6c0-11.4-9.2-20.6-20.5-20.6zm-38.6 130.6s-3.6-4.3-6.6-8.1c13.1-3.7 18.1-11.9 18.1-11.9-4.1 2.7-8 4.6-11.5 5.9-5 2.1-9.8 3.5-14.5 4.3-9.6 1.8-18.4 1.3-25.9-.1-5.7-1.1-10.6-2.7-14.7-4.3-2.3-.9-4.8-2-7.3-3.4-.3-.2-.6-.3-.9-.5-.2-.1-.3-.2-.4-.3-1.8-1-2.8-1.7-2.8-1.7s4.8 8 17.5 11.8c-3 3.8-6.7 8.3-6.7 8.3-22.1-.7-30.5-15.2-30.5-15.2 0-32.2 14.4-58.3 14.4-58.3 14.4-10.8 28.1-10.5 28.1-10.5l1 1.2c-18 5.2-26.3 13.1-26.3 13.1s2.2-1.2 5.9-2.9c10.7-4.7 19.2-6 22.7-6.3.6-.1 1.1-.2 1.7-.2 6.1-.8 13-1 20.2-.2 9.5 1.1 19.7 3.9 30.1 9.6 0 0-7.9-7.5-24.9-12.7l1.4-1.6s13.7-.3 28.1 10.5c0 0 14.4 26.1 14.4 58.3 0 0-8.5 14.5-30.6 15.2z" })));
+};
+
 var IconModule = /*#__PURE__*/Object.freeze({
     __proto__: null,
     FarmIcon: Icon$J,
@@ -2059,6 +2063,7 @@ var IconModule = /*#__PURE__*/Object.freeze({
     TicketIcon: Icon$X,
     TradeIcon: Icon$Y,
     TwitterIcon: Icon$Z,
+    DiscordIcon: Icon$Discord,
     RedditIcon: Icon$_,
     AuditIcon: Icon$$,
     GooseIcon: Icon$10,
@@ -2215,11 +2220,6 @@ var links = [
 ];
 var socials = [
     {
-        label: "Twitter",
-        icon: "TwitterIcon",
-        href: "https://twitter.com/CashCowProtocol",
-    },
-    {
         label: "Telegram",
         icon: "TelegramIcon",
         items: [
@@ -2234,10 +2234,15 @@ var socials = [
         ],
     },
     {
+        label: "Twitter",
+        icon: "TwitterIcon",
+        href: "https://twitter.com/CashCowProtocol",
+    },
+    {
         label: "Discord",
         icon: "DiscordIcon",
         href: "https://discord.gg/3kFU9vCjs7",
-      },
+    },
 ];
 var MENU_HEIGHT = 64;
 var MENU_ENTRY_HEIGHT = 48;
